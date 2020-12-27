@@ -1566,6 +1566,8 @@ USER root
 
 USER root
 
+RUN sed -i 's,^;date.timezone =.*$,date.timezone = Europe/Moscow,' /etc/php/${LARADOCK_PHP_VERSION}/cli/php.ini
+
 # Clean up
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
