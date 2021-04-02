@@ -1,4 +1,5 @@
-FROM mdillon/postgis:latest
+ARG POSTGRES_VERSION=alpine
+FROM postgis/postgis:${POSTGRES_VERSION}
 
 LABEL maintainer="Mahmoud Zalt <mahmoud@zalt.me>"
 
